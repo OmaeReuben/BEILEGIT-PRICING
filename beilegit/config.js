@@ -11,9 +11,9 @@
 window.BEILEGIT_CONFIG = {
   ceo: "Omae Reuben Oirere",
   ceoTitle: "Chief Executive Officer",
-  email: "",
-  phone: "",
-  whatsapp: "",
+  email: "reubenomae207@gmail.com",
+  phone: "+254769320691",
+  whatsapp: "+254769320691",
   location: "Kenya",
   adminHash: "b6fe191388739028d203b3d53ebef2a34e9d216b05aab60a1bbeca31a5abe6f0"
 };
