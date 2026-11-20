@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuel and electricity prices | BeiLegit</title>
+<meta name="description" content="Legal maximum pump prices and electricity base rates. A petrol station may charge less than the cap, never more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="sector" data-sector="energy">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="top"></header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Sector</p>
+    <h1>Fuel and electricity</h1>
+    <p>Legal maximum pump prices and electricity base rates. A petrol station may charge less than the cap, never more.</p>
+  </section>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search: petrol, diesel, units…" aria-label="Search prices" autocomplete="off">
+  </div>
+  <div class="filters">
+    <select id="f-cat" aria-label="Category"></select>
+    <select id="f-town" aria-label="Town"></select>
+    <select id="f-sort" aria-label="Sort">
+      <option value="org">Grouped by organisation</option>
+      <option value="cheap">Cheapest first</option>
+      <option value="dear">Most expensive first</option>
+      <option value="az">A to Z</option>
+    </select>
+  </div>
+  <div id="status" class="notice" hidden></div>
+  <div id="summary" class="summary" hidden></div>
+  <ul id="list" class="list"></ul>
+  <section class="tips">
+    <h2>Before you pay</h2>
+    <ul>
+      <li>Compare the price you are quoted with the price listed here. If it is higher, ask why and show the listing.</li>
+      <li>Use the phone number or official link on the listing. Do not use a number given to you by a stranger or a broker.</li>
+      <li>Look for the <span class="stamp">Verified</span> stamp. It means BeiLegit has confirmed the listing.</li>
+      <li>Always ask for a receipt that shows the amount you paid.</li>
+    </ul>
+  </section>
+</main>
+
+<footer id="site-footer" class="foot"></footer>
+<dialog id="org-dialog" aria-labelledby="d-name"><div class="dlg" id="org-body"></div></dialog>
+<noscript><p class="wrap">BeiLegit needs JavaScript to show prices.</p></noscript>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | BeiLegit</title>
+<meta name="description" content="Contact BeiLegit, report an overcharge, or get your organisation listed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="top"></header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Contact</p>
+    <h1>Talk to BeiLegit</h1>
+    <p>Report an overcharge, correct a price, or get your organisation listed.</p>
+  </section>
+  <section class="twocol">
+    <div class="panel">
+      <h2>Our office</h2>
+      <div id="contact-details" class="contactbox"></div>
+    </div>
+    <div class="panel">
+      <h2>Charged more than the listed price?</h2>
+      <ol class="steps">
+        <li>Keep your receipt or the payment message.</li>
+        <li>Show the organisation its listing on BeiLegit and ask for the difference back.</li>
+        <li>If that fails, send us the organisation name, the item, the listed price and what you paid.</li>
+      </ol>
+    </div>
+  </section>
+  <form class="panel" id="contact-form" novalidate>
+    <h2>Send us a message</h2>
+    <div class="grid2">
+      <label class="f" for="c-name">Your name<input id="c-name" maxlength="80" autocomplete="name"></label>
+      <label class="f" for="c-topic">Topic<select id="c-topic">
+        <option>Report an overcharge</option>
+        <option>Correct a listed price</option>
+        <option>List my organisation</option>
+        <option>Other</option>
+      </select></label>
+    </div>
+    <label class="f" for="c-text" style="margin-top:12px">Message<textarea id="c-text" rows="5" maxlength="1500"></textarea></label>
+    <div class="actions"><button type="submit" class="btn primary">Continue</button></div>
+    <div class="actions" id="contact-send"></div>
+  </form>
+  <section class="panel">
+    <h2>For organisations</h2>
+    <p>Listing your prices is done on the <a href="organisations.html">List your prices</a> page. Every listing is checked by our admin before it becomes public.</p>
+  </section>
+</main>
+
+<footer id="site-footer" class="foot"></footer>
+<dialog id="org-dialog" aria-labelledby="d-name"><div class="dlg" id="org-body"></div></dialog>
+<noscript><p class="wrap">BeiLegit needs JavaScript to show prices.</p></noscript>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

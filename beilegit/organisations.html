@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>List your prices | BeiLegit</title>
+<meta name="description" content="Organisations: publish your fixed prices on BeiLegit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="organisations">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header" class="top"></header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <p class="eyebrow">For organisations</p>
+    <h1>Publish your <em>fixed prices</em>.</h1>
+    <p>List what you sell and what it costs. Customers who can see your prices in public trust you faster.</p>
+  </section>
+  <ol class="steps panel">
+    <li><strong>Fill in the form.</strong> Add every product or service with its final price.</li>
+    <li><strong>Send for approval.</strong> You get an approval code to send to BeiLegit.</li>
+    <li><strong>Go public.</strong> Once our admin confirms your organisation, your prices appear on the board with the Verified stamp.</li>
+  </ol>
+  <div class="panel" id="mine-panel" hidden>
+    <h2>Your listings on this device</h2>
+    <p class="sub">These are not public yet. Send each one for approval.</p>
+    <div id="mine" class="mine"></div>
+  </div>
+  <div id="form-box"></div>
+</main>
+
+<footer id="site-footer" class="foot"></footer>
+<dialog id="org-dialog" aria-labelledby="d-name"><div class="dlg" id="org-body"></div></dialog>
+<noscript><p class="wrap">BeiLegit needs JavaScript to show prices.</p></noscript>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
