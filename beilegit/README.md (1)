@@ -15,17 +15,6 @@ Built with plain HTML, CSS and JavaScript. No PHP, no build step, no server.
 | `script.js` | Search, filters, sorting, the form and the export |
 | `data.js` | The published listings every visitor sees |
 
-## Run it
-
-Open `index.html` in a browser. Nothing to install.
-
-## Put it online with GitHub Pages
-
-1. Create a repository and upload the four files above.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. The site goes live at `https://<your-username>.github.io/<repository-name>/`.
-
 ## How listings are published
 
 A static site has no database, so publishing works in two steps:
