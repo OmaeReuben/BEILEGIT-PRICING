@@ -1,0 +1,40 @@
+# BeiLegit
+
+Know the real price before you pay.
+
+BeiLegit is a price transparency site. Organisations publish the fixed prices of their products and services, and citizens search and compare those prices so they are not overcharged or scammed.
+
+Built with plain HTML, CSS and JavaScript. No PHP, no build step, no server.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `index.html` | Page structure: price board and the organisation form |
+| `style.css` | All styling, with light and dark themes |
+| `script.js` | Search, filters, sorting, the form and the export |
+| `data.js` | The published listings every visitor sees |
+
+## Run it
+
+Open `index.html` in a browser. Nothing to install.
+
+## Put it online with GitHub Pages
+
+1. Create a repository and upload the four files above.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+4. The site goes live at `https://<your-username>.github.io/<repository-name>/`.
+
+## How listings are published
+
+A static site has no database, so publishing works in two steps:
+
+1. An organisation fills in the form under **For organisations**. The listing is saved in that browser only and shows an "Awaiting review" label.
+2. The admin clicks **Download data.js for publishing**, checks the listing, sets `verified: true` if the organisation is genuine, and commits the new `data.js` to the repository. The listing is then public.
+
+`data.js` ships with officially published Kenyan prices (mobile money, government services, fuel, SGR fares, park fees and more), compiled on 20 November 2026. Each listing has a `source` link. Re-check them regularly: fuel prices change on the 14th of every month.
+
+## Next steps
+
+To let organisations publish directly without the admin step, connect the form to a hosted database such as Firebase or Supabase. Both work from plain JavaScript and need no PHP.

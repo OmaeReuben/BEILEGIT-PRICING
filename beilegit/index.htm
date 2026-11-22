@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BeiLegit: organisations publish fixed prices so citizens can check the real price before paying.">
+<title>BeiLegit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#prices" aria-label="BeiLegit home">bei<span class="legit">legit</span></a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#prices" id="tab-prices">Check prices</a>
+    <a href="#list-prices" id="tab-list">For organisations</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section id="view-prices">
+    <div class="hero">
+      <h1>Know the <em>real price</em> before you pay.</h1>
+      <p>Organisations publish their fixed prices here. Search a product or service, compare, and pay what is listed.</p>
+      <div class="search">
+        <input id="q" type="search" placeholder="Search: haircut, passport photo, Nakuru…" aria-label="Search prices" autocomplete="off">
+      </div>
+      <div class="filters">
+        <select id="f-cat" aria-label="Category"></select>
+        <select id="f-town" aria-label="Town"></select>
+        <select id="f-sort" aria-label="Sort">
+          <option value="cheap">Cheapest first</option>
+          <option value="dear">Most expensive first</option>
+          <option value="new">Recently updated</option>
+          <option value="az">A to Z</option>
+        </select>
+      </div>
+    </div>
+    <div id="status" class="notice" hidden></div>
+    <div id="summary" class="summary" hidden></div>
+    <ul id="list" class="list"></ul>
+
+    <div class="tips">
+      <h2>Before you pay</h2>
+      <ul>
+        <li>Compare the price you are quoted with the price listed here. If it is higher, ask why and show the listing.</li>
+        <li>Call the phone number on the listing. Do not use a number given to you by a stranger or a broker.</li>
+        <li>Look for the <span class="stamp">Verified</span> stamp. It means BeiLegit has confirmed the organisation.</li>
+        <li>Always ask for a receipt that shows the amount you paid.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="view-list" hidden>
+    <div class="hero">
+      <h1>Publish your <em>fixed prices</em>.</h1>
+      <p>List what you sell and what it costs. Customers who see your prices in public trust you faster.</p>
+    </div>
+    <div id="write-note" class="notice" hidden></div>
+
+    <div class="panel" id="mine-panel" hidden>
+      <h2>Your organisations</h2>
+      <p class="sub">Listings you add are saved on this device until the BeiLegit admin reviews and publishes them.</p>
+      <div id="mine" class="mine"></div>
+      <div class="actions"><button type="button" class="btn small" id="export">Download data.js for publishing</button><span id="export-msg" class="msg" role="status"></span></div>
+    </div>
+
+    <form class="panel" id="org-form" novalidate>
+      <h2 id="form-title">Add an organisation</h2>
+      <p class="sub">Prices are in Kenya shillings and should be the final amount a customer pays.</p>
+      <div class="grid2">
+        <label class="f" for="o-name">Organisation name<input id="o-name" maxlength="80" required></label>
+        <label class="f" for="o-cat">Category<select id="o-cat"></select></label>
+        <label class="f" for="o-town">Town or area<input id="o-town" maxlength="60" placeholder="e.g. Nakuru, Umoja" required></label>
+        <label class="f" for="o-phone">Customer phone<input id="o-phone" maxlength="20" inputmode="tel" placeholder="07…"></label>
+      </div>
+      <label class="f" for="o-about" style="margin-top:12px">Short description<textarea id="o-about" rows="2" maxlength="240"></textarea></label>
+
+      <h3 style="margin-top:18px;font-size:1.05rem">Products and services</h3>
+      <div id="items" class="items"></div>
+      <div class="actions"><button type="button" class="btn small" id="add-item">Add another price</button></div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary" id="save">Save prices</button>
+        <button type="button" class="btn" id="cancel-edit" hidden>Cancel editing</button>
+        <span id="form-msg" class="msg" role="status"></span>
+      </div>
+    </form>
+  </section>
+
+  <footer>BeiLegit shows prices as published by each organisation. Listings marked Example are sample data.</footer>
+</main>
+
+<dialog id="org-dialog" aria-labelledby="d-name"><div class="dlg" id="org-body"></div></dialog>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
